@@ -83,7 +83,6 @@ class CodeGenerationService
         }
     }
 
-
     /**
      * @param string $context
      * @return string

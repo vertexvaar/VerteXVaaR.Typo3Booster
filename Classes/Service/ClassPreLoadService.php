@@ -64,6 +64,7 @@ class ClassPreLoadService
      */
     protected function generatePreLoadFile($context, array $files)
     {
+
         $filesCount = count($files);
 
         $tempFile = $this->temporaryFileService->get('pre_move_' . $context);
@@ -84,7 +85,7 @@ class ClassPreLoadService
 
         $this->output->outputLine('Testing the generated code.');
         if (!$this->isValidPhpFile($tempFile)) {
-            $this->output->outputLine('The preload file generation failed. Aborting!');
+            $this->output->outputLine('<error>The preload file generation failed. Aborting!</error>');
             return false;
         }
         $this->output->outputLine('Success.');
@@ -102,6 +103,10 @@ class ClassPreLoadService
     {
         $process = new PhpProcess(file_get_contents($file));
         $code = $process->run();
-        return (empty($process->getErrorOutput()) && 0 === $code);
+        $success = (empty(($errorOutput = $process->getErrorOutput())) && 0 === $code);
+        if (false === $success) {
+            $this->output->outputLine('<warning>%s</warning>', [$errorOutput]);
+        }
+        return true;
     }
 }

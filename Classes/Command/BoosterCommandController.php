@@ -58,7 +58,7 @@ class BoosterCommandController extends CommandController
             if ($this->classPreLoadService->generate($context)) {
                 $this->output->outputLine('Done.');
             } else {
-                $this->output->outputLine('Failure.');
+                $this->output->outputLine('<error>Failure.</error>');
             }
         } else {
             $this->outputLine('Skipping preload because it\'s already present. Use --force to overwrite it.');
