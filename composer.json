@@ -1,0 +1,34 @@
+{
+    "name": "vertexvaar/booster",
+    "type": "typo3-cms-extension",
+    "license": "GPL-2.0+",
+    "description": "Boosts your TYPO3 instance with class preloading",
+    "keywords": [
+        "performance",
+        "boost",
+        "classpreloader",
+        "typo3"
+    ],
+    "homepage": "http://vxvr.de",
+    "authors": [
+        {
+            "name": "Oliver Eglseder",
+            "email": "php@vxvr.de"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "VerteXVaaR\\Booster\\": "Classes/"
+        }
+    },
+    "require": {
+        "php": "^5.5",
+        "classpreloader/classpreloader": "^3.0",
+        "symfony/process": "^3.0"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    }
+}
