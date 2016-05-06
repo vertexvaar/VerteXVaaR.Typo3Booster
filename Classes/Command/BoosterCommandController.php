@@ -1,11 +1,11 @@
 <?php
-namespace VerteXVaaR\Booster\Command;
+namespace VerteXVaaR\Typo3Booster\Command;
 
 use TYPO3\CMS\Core\Cache\CacheManager;
 use TYPO3\CMS\Core\Cache\Frontend\FrontendInterface;
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 use TYPO3\CMS\Extbase\Mvc\Controller\CommandController;
-use VerteXVaaR\Booster\Service\ClassPreLoadService;
+use VerteXVaaR\Typo3Booster\Service\ClassPreLoadService;
 
 /**
  * Class BoosterCommandController

@@ -1,5 +1,5 @@
 {
-    "name": "vertexvaar/booster",
+    "name": "vertexvaar/typo3booster",
     "type": "typo3-cms-extension",
     "license": "GPL-2.0+",
     "description": "Boosts your TYPO3 instance with class preloading",
@@ -18,8 +18,9 @@
     ],
     "autoload": {
         "psr-4": {
-            "VerteXVaaR\\Booster\\": "Classes/"
-        }
+            "VerteXVaaR\\Typo3Booster\\": "Classes/"
+        },
+        "files": ["Resources/Private/PHP/Scripts/Preload.php"]
     },
     "require": {
         "php": "^5.5",

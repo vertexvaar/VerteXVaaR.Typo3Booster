@@ -1,5 +1,5 @@
 <?php
-namespace VerteXVaaR\Booster\Service;
+namespace VerteXVaaR\Typo3Booster\Service;
 
 use TYPO3\CMS\Core\Utility\ExtensionManagementUtility;
 
@@ -23,7 +23,7 @@ class CodeGenerationService
      */
     public function __construct()
     {
-        $path = ExtensionManagementUtility::extPath('booster') . 'Resources/Private/PHP/';
+        $path = ExtensionManagementUtility::extPath('typo3booster') . 'Resources/Private/PHP/';
         $this->wrapperTemplateFile = $path . 'Wrapper/template.php';
 
         if (is_dir($path . TYPO3_version)) {

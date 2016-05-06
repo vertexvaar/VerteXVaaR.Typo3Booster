@@ -4,7 +4,7 @@ if (!defined('TYPO3_MODE')) {
 }
 
 $GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['extbase']['commandControllers'][] =
-    \VerteXVaaR\Booster\Command\BoosterCommandController::class;
+    \VerteXVaaR\Typo3Booster\Command\BoosterCommandController::class;
 
 $GLOBALS['TYPO3_CONF_VARS']['SYS']['caching']['cacheConfigurations']['cache_preload'] = [
     'frontend' => \TYPO3\CMS\Core\Cache\Frontend\PhpFrontend::class,

@@ -1,5 +1,5 @@
 <?php
-namespace VerteXVaaR\Booster\Service;
+namespace VerteXVaaR\Typo3Booster\Service;
 
 use TYPO3\CMS\Core\Utility\GeneralUtility;
 

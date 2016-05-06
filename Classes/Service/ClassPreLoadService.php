@@ -1,5 +1,5 @@
 <?php
-namespace VerteXVaaR\Booster\Service;
+namespace VerteXVaaR\Typo3Booster\Service;
 
 use Symfony\Component\Process\PhpProcess;
 use TYPO3\CMS\Extbase\Mvc\Cli\ConsoleOutput;
