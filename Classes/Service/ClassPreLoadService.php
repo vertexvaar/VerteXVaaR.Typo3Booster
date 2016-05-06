@@ -39,9 +39,6 @@ class ClassPreLoadService
         $process = new PhpProcess($code, PATH_site);
         $process->run();
 
-        var_dump($process->getOutput());
-        var_dump($process->getErrorOutput());
-
         $files = require($targetFile);
 
         $this->generatePreLoadFile($context, $files);
