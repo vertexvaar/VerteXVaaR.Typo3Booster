@@ -23,11 +23,11 @@ class BoosterCommandController extends CommandController
     protected $cache = null;
 
     /**
-     * BoosterCommandController constructor.
+     * @throws \TYPO3\CMS\Core\Cache\Exception\NoSuchCacheException
      */
-    public function __construct()
+    public function initializeObject()
     {
-        $this->classPreLoadService = new ClassPreLoadService();
+        $this->classPreLoadService = new ClassPreLoadService($this->output);
         $this->cache = GeneralUtility::makeInstance(CacheManager::class)->getCache('cache_preload');
     }
 
@@ -55,7 +55,11 @@ class BoosterCommandController extends CommandController
     {
         if (true === $force || !$this->cache->has($context)) {
             $this->outputLine(sprintf('Generating class preload file for %s', $context));
-            $this->classPreLoadService->generate($context);
+            if ($this->classPreLoadService->generate($context)) {
+                $this->output->outputLine('Done.');
+            } else {
+                $this->output->outputLine('Failure.');
+            }
         } else {
             $this->outputLine('Skipping preload because it\'s already present. Use --force to overwrite it.');
         }
