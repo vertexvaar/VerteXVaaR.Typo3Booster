@@ -60,4 +60,5 @@ Please report any bug or negative side effects, as well as your feedback, here h
 ## Other stuff
 
 Copyright & Author: Oliver Eglseder <php@vxvr.de>
+License: GPL-2.0+
 Supported by: in2code GmbH https://www.in2code.de
